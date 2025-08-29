@@ -58,10 +58,12 @@ export default {
 				},
 				racing: {
 					red: 'hsl(var(--racing-red))',
-					navy: 'hsl(var(--racing-navy))',
+					green: 'hsl(var(--racing-green))',
 					gold: 'hsl(var(--racing-gold))',
 					dark: 'hsl(var(--racing-dark))',
-					carbon: 'hsl(var(--racing-carbon))'
+					carbon: 'hsl(var(--racing-carbon))',
+					white: 'hsl(var(--racing-white))',
+					earth: 'hsl(var(--racing-earth))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

@@ -8,48 +8,51 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Kenya Grid Club Racing Theme */
-    --background: 222 30% 4%;
-    --foreground: 0 0% 100%;
+    /* Kenya Grid Club Racing Theme - Kenyan Flag Inspired */
+    --background: 0 0% 3%;
+    --foreground: 0 0% 98%;
 
-    --card: 222 25% 8%;
+    --card: 0 0% 7%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 222 25% 8%;
+    --popover: 0 0% 7%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 345 88% 50%;
+    --primary: 0 85% 45%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 219 41% 17%;
+    --secondary: 140 35% 15%;
     --secondary-foreground: 0 0% 90%;
 
-    --muted: 222 20% 12%;
+    --muted: 0 0% 12%;
     --muted-foreground: 0 0% 65%;
 
-    --accent: 46 100% 54%;
-    --accent-foreground: 222 30% 4%;
+    --accent: 35 95% 55%;
+    --accent-foreground: 0 0% 3%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 222 20% 15%;
-    --input: 222 20% 15%;
-    --ring: 345 88% 50%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 45%;
 
     --radius: 0.75rem;
 
-    /* Racing-specific colors */
-    --racing-red: 345 88% 50%;
-    --racing-navy: 219 41% 17%;
-    --racing-gold: 46 100% 54%;
-    --racing-dark: 222 30% 4%;
-    --racing-carbon: 222 20% 8%;
+    /* Kenya-inspired Racing Colors */
+    --racing-red: 0 85% 45%;
+    --racing-green: 140 35% 15%;
+    --racing-gold: 35 95% 55%;
+    --racing-dark: 0 0% 3%;
+    --racing-carbon: 0 0% 8%;
+    --racing-white: 0 0% 98%;
+    --racing-earth: 25 45% 35%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--racing-dark)), hsl(var(--racing-navy)));
+    /* Kenya-Racing Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--racing-dark)), hsl(var(--racing-green)));
     --gradient-racing: linear-gradient(90deg, hsl(var(--racing-red)), hsl(var(--racing-gold)));
-    --gradient-carbon: linear-gradient(45deg, hsl(var(--racing-carbon)), hsl(var(--muted)));
+    --gradient-carbon: linear-gradient(45deg, hsl(var(--racing-carbon)), hsl(var(--racing-earth)));
+    --gradient-kenyan: linear-gradient(135deg, hsl(var(--racing-red)), hsl(var(--racing-green)), hsl(var(--racing-dark)));
     
     /* Shadows */
     --shadow-racing: 0 10px 40px -10px hsl(var(--racing-red) / 0.3);
