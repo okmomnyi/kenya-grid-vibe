@@ -8,35 +8,55 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Kenya Grid Club Racing Theme */
+    --background: 222 30% 4%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 25% 8%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 25% 8%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 345 88% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 219 41% 17%;
+    --secondary-foreground: 0 0% 90%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 20% 12%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 46 100% 54%;
+    --accent-foreground: 222 30% 4%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 20% 15%;
+    --input: 222 20% 15%;
+    --ring: 345 88% 50%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Racing-specific colors */
+    --racing-red: 345 88% 50%;
+    --racing-navy: 219 41% 17%;
+    --racing-gold: 46 100% 54%;
+    --racing-dark: 222 30% 4%;
+    --racing-carbon: 222 20% 8%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--racing-dark)), hsl(var(--racing-navy)));
+    --gradient-racing: linear-gradient(90deg, hsl(var(--racing-red)), hsl(var(--racing-gold)));
+    --gradient-carbon: linear-gradient(45deg, hsl(var(--racing-carbon)), hsl(var(--muted)));
+    
+    /* Shadows */
+    --shadow-racing: 0 10px 40px -10px hsl(var(--racing-red) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--accent) / 0.2);
+    
+    /* Animations */
+    --transition-racing: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +120,40 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+  
+  /* Racing Animations */
+  .pulse-racing {
+    animation: pulse-racing 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse-racing {
+    0%, 100% {
+      box-shadow: 0 0 0 0 hsl(var(--racing-red) / 0.7);
+    }
+    70% {
+      box-shadow: 0 0 0 10px hsl(var(--racing-red) / 0);
+    }
+  }
+  
+  .carbon-texture {
+    background-image: 
+      radial-gradient(circle at 25% 25%, hsl(var(--muted)) 2px, transparent 2px),
+      radial-gradient(circle at 75% 75%, hsl(var(--muted)) 2px, transparent 2px);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+  }
+  
+  .speed-lines {
+    background-image: linear-gradient(90deg, transparent 0%, hsl(var(--accent) / 0.1) 50%, transparent 100%);
+    background-size: 200px 2px;
+    background-repeat: repeat-y;
+    animation: speed-lines 3s linear infinite;
+  }
+  
+  @keyframes speed-lines {
+    0% { background-position-x: -200px; }
+    100% { background-position-x: 200px; }
   }
 }
